@@ -47,11 +47,13 @@ public class MySource extends AbstractSource implements Configurable, PollableSo
         }
     }
 
+    // backoff 步长
     @Override
     public long getBackOffSleepIncrement() {
         return 0;
     }
 
+    // backoff 最长时间
     @Override
     public long getMaxBackOffSleepInterval() {
         return 0;

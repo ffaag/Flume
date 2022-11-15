@@ -19,6 +19,7 @@ public class MySink extends AbstractSink implements Configurable {
     private String suffix;
 
 
+    //初始化 context（读取配置文件内容）
     @Override
     public void configure(Context context) {
         //读取配置文件内容，有默认值
@@ -27,6 +28,7 @@ public class MySink extends AbstractSink implements Configurable {
         suffix = context.getString("suffix");
     }
 
+    //从 Channel 读取获取数据（event），这个方法将被循环调用
     @Override
     public Status process() throws EventDeliveryException {
 
